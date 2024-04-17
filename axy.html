@@ -1,0 +1,24 @@
+// Create a new HTML file
+let htmlContent = `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+
+<h1>Hello</h1>
+
+<img src='https://i.pinimg.com/736x/3f/3f/ac/3f3face97035004591eb2659fe9c7b53.jpg' alt='A cute puppy'>
+
+</body>
+</html>
+`;
+
+// Use Node.js file system module to write the file
+const fs = require('fs');
+
+fs.writeFile('index.html', htmlContent, (err) => {
+    if (err) throw err;
+    console.log('File is created successfully.');
+}); 
